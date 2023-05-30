@@ -323,6 +323,7 @@ a:hover{
   position: fixed;
   width: 100%;
   z-index:100;
+  top:0px;
 }
 
 .topnav a {
@@ -387,8 +388,13 @@ a:hover{
 #scrollBtn.show {
   display: block;
 }
-
-         
+        
+.bannerFix {
+    margin-top:52px;
+}
+@media screen and (max-width: 600px){
+    .bannerFix {margin-top:0px;}
+}         
     </style> 
  
 </head>
@@ -397,7 +403,7 @@ a:hover{
  <button onclick="scrollToTop()" id="scrollBtn">Back to Top</button>
  <div>   
     <div class="topnav" id="myTopnav">
-      <a href="#home" class="active">Home</a>
+      <a href="#" onclick="scrollToTop()" class="active">Home</a>
       <a href="#news">Prize Counter</a>
       <a href="#contact">Game Over</a>
       <a href="#about">FAQ</a>
@@ -405,7 +411,7 @@ a:hover{
             <i class="fa fa-bars"></i>
       </a>
 </div>
-    <div id="home">
+    <div class="bannerFix">
       <img src="https://i.ibb.co/vL1FYL2/ezgif-com-gif-maker-2.png"
             alt="GC-arcade-header-desktop-Edited" style="width: 100%;" class="responsive" id="Header1">
         <img src="https://i.ibb.co/wCLYq41/GC-arcade-header-images-mobile-x3-Edited.png"
